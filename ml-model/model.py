@@ -1,0 +1,1 @@
+print("ML model initialized")
