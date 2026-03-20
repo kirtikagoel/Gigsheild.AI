@@ -430,4 +430,8 @@ GigShield AI ensures:
 
 The system balances **security + fairness**, ensuring trust in the platform while maintaining financial sustainability.
 
+## Demo Video
+
+[Watch Demo](https://youtu.be/_5AzLYDxDpo?si=qK0HO5rPowh9zwNh)
+
 ---
