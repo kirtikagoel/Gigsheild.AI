@@ -15,7 +15,7 @@ India's gig economy depends heavily on delivery partners working with platforms 
 - Swiggy
 - Zepto
 - Amazon
-- Dunzo
+- Dunzo 
 
 These workers rely on daily deliveries for income. However, external disruptions such as:
 
@@ -37,18 +37,16 @@ GigShield AI introduces an **AI-powered parametric insurance system** that autom
 
 The system works by:
 
-1. Monitoring real-time environmental conditions.
-2. Predicting disruption risks using AI models.
-3. Triggering claims automatically when thresholds are crossed.
-4. Processing instant payouts for income loss.
+1. Monitoring real-time environmental conditions  
+2. Predicting disruption risks using AI models  
+3. Triggering claims automatically when thresholds are crossed  
+4. Processing instant payouts for income loss  
 
 Unlike traditional insurance, workers **do not need to manually file claims**.
 
 ---
 
 # Selected Persona
-
-This solution focuses on:
 
 ## Food Delivery Partners
 
@@ -82,20 +80,16 @@ Basic | ₹20 | ₹500 |
 Standard | ₹35 | ₹900 |
 Premium | ₹50 | ₹1500 |
 
-Workers can choose plans based on their risk tolerance and expected income protection.
-
 ---
 
 # AI-Based Dynamic Premium Calculation
 
-Premiums are dynamically adjusted using AI models based on risk factors such as:
+Premiums are dynamically adjusted using AI models based on:
 
-- Location
-- Historical weather patterns
-- Seasonal disruption trends
-- Flood or pollution risk zones
-
-Example:
+- Location  
+- Historical weather patterns  
+- Seasonal trends  
+- Risk zones  
 
 | Area Type | Risk Score | Weekly Premium |
 |-----------|-----------|---------------|
@@ -103,15 +97,9 @@ Low Risk Zone | 0.2 | ₹20 |
 Moderate Risk Zone | 0.5 | ₹30 |
 High Risk Zone | 0.8 | ₹45 |
 
-This ensures fair pricing and sustainable insurance coverage.
-
 ---
 
 # Parametric Claim Triggers
-
-GigShield AI uses **parametric insurance**, meaning claims are triggered automatically when specific conditions occur.
-
-Example triggers include:
 
 | Event | Trigger Condition | Data Source |
 |------|------------------|------------|
@@ -120,19 +108,51 @@ Extreme Heat | Temperature > 45°C | Weather API |
 Severe Pollution | AQI > 400 | Air Quality API |
 Flood Risk | Heavy rain + road closures | Traffic API |
 
-Example trigger logic:
+**Trigger Logic:**
 
 IF rainfall > 70mm  
 AND worker location matches affected zone  
-THEN claim is automatically triggered
+THEN claim is automatically triggered  
 
-This allows **instant claim processing without manual verification delays**.
+---
+
+# AI Components
+
+GigShield AI integrates AI across multiple layers:
+
+### 1. Risk Prediction Engine
+- Predicts disruption probability using weather and location data  
+- Outputs a **risk score (0–1)**  
+
+### 2. Dynamic Pricing Engine
+- Adjusts weekly premium based on risk score  
+- Ensures fair and scalable pricing  
+
+### 3. Parametric Trigger Engine
+- Monitors real-time data  
+- Automatically triggers claims when thresholds are met  
+
+### 4. Fraud Detection System
+- Detects GPS spoofing  
+- Prevents duplicate claims  
+- Validates worker activity  
+
+---
+
+# Claim Workflow
+
+1. Worker registers and selects weekly plan  
+2. System continuously monitors environmental conditions  
+3. Disruption occurs (rain, pollution, etc.)  
+4. Parametric trigger activates  
+5. Claim is automatically generated  
+6. Fraud detection validates the claim  
+7. Instant payout is processed  
+8. Worker receives compensation  
 
 ---
 
 # System Workflow
-
-The GigShield AI platform follows this workflow:
 
 Worker Registration  
 ↓  
@@ -142,184 +162,272 @@ Weekly Plan Selection
 ↓  
 Policy Activation  
 ↓  
-Real-Time Environmental Monitoring  
+Real-Time Monitoring  
 ↓  
-Parametric Trigger Detection  
+Trigger Detection  
 ↓  
-Automatic Claim Generation  
+Claim Generation  
 ↓  
-Instant Payout to Worker
-
----
-
-# AI/ML Integration
-
-GigShield AI integrates machine learning in two key areas.
-
-## 1. Risk Prediction Model
-
-Purpose:
-Predict probability of environmental disruptions in specific zones.
-
-Input features:
-
-- Historical weather data
-- Current forecasts
-- Location-based risk
-- Seasonal patterns
-
-Possible ML models:
-
-- Random Forest
-- Gradient Boosting
-- Time Series Forecasting
-
-Output:
-
-Risk Score (0–1)
-
-This score helps determine insurance pricing and coverage.
-
----
-
-## 2. Fraud Detection System
-
-To ensure fair claims, the platform includes an AI-based fraud detection layer.
-
-Fraud scenarios detected:
-
-- GPS location spoofing
-- Duplicate claims
-- False inactivity reporting
-
-Example validation rule:
-
-If a worker claims disruption during heavy rain but delivery activity is recorded in the same period, the claim will be flagged for review.
+Instant Payout  
 
 ---
 
 # Technology Stack
 
-Frontend
+Frontend  
+- React  
+- Tailwind CSS  
 
-- React
-- Tailwind CSS
+Backend  
+- Node.js  
+- Express.js  
 
-Backend
+Database  
+- MongoDB  
 
-- Node.js
-- Express.js
+Machine Learning  
+- Python  
+- Scikit-learn  
 
-Database
-
-- MongoDB
-
-Machine Learning
-
-- Python
-- Scikit-learn
-
-External Integrations
-
-- Weather API (OpenWeatherMap)
-- Traffic Data API
-- Pollution Data API
-
-Payment Simulation (future phases)
-
-- Razorpay Sandbox
-- Stripe Test Mode
+External APIs  
+- Weather API  
+- Traffic API  
+- Air Quality API  
 
 ---
 
-# Platform Architecture
+# Architecture Diagram
 
-User Mobile/Web App  
-↓  
-Frontend (React + Tailwind)  
-↓  
-Backend API (Node.js + Express)  
-↓  
-Database (MongoDB)
-
-External Services:
-
-- Weather API
-- Traffic API
-- Air Quality API
-- Payment Gateway
+![Architecture](docs/architecture.png)
 
 ---
 
-# Prototype Screens (Seed Phase)
+# Prototype Screens
 
-For Phase 1, the prototype includes the following basic interfaces:
+### Landing Page
+![Landing](docs/screenshots/landing.jpeg)
 
-1. Landing Page – Overview of the platform
-2. Worker Registration – Sign up for gig workers
-3. Weekly Plan Selection – Choose insurance plan
-4. Worker Dashboard – View active coverage and claims
+### Signup Page
+![Signup](docs/screenshots/signup.jpeg)
 
-These screens demonstrate the overall system workflow.
+### Plan Selection
+![Plan](docs/screenshots/plan.jpeg)
+
+### Dashboard
+![Dashboard](docs/screenshots/dashboard.jpeg)
 
 ---
 
 # Development Roadmap
 
-## Phase 1 – Seed (Ideation & Foundation)
+## Phase 1 – Seed
+- Idea validation  
+- Prototype design  
+- Architecture definition  
 
-- Define problem and solution
-- Select delivery worker persona
-- Design insurance model
-- Create prototype UI
-- Document AI integration strategy
+## Phase 2 – Scale
+- User system  
+- Policy management  
+- Trigger automation  
 
-Deliverables:
-
-- Idea documentation
-- GitHub repository
-- Prototype UI
-- Architecture overview
-
----
-
-## Phase 2 – Scale (Automation & Protection)
-
-Planned features:
-
-- Worker registration system
-- Insurance policy management
-- Dynamic premium calculation
-- Parametric trigger monitoring
-- Automated claims system
-
----
-
-## Phase 3 – Soar (Optimization & Intelligence)
-
-Advanced features:
-
-- AI-based fraud detection
-- Instant payout simulation
-- Predictive disruption analytics
-- Worker and insurer dashboards
+## Phase 3 – Soar
+- Fraud detection  
+- Instant payouts  
+- Predictive analytics  
 
 ---
 
 # Expected Impact
 
-For Gig Workers
+### For Gig Workers
+- Income protection  
+- Weekly affordable insurance  
+- Automatic payouts  
 
-- Protection from sudden income loss
-- Affordable weekly micro-insurance
-- Automated claims with no paperwork
-
-For Insurance Providers
-
-- Reduced claim fraud
-- Predictive risk management
-- Scalable gig economy insurance model
+### For Insurers
+- Reduced fraud  
+- Predictive analytics  
+- Scalable insurance model  
 
 ---
 
-# Repository Structure
+---
+
+# Adversarial Defense & Anti-Spoofing Strategy
+
+## The Threat Scenario
+
+GigShield AI operates in an environment where coordinated fraud attacks can exploit parametric insurance systems.
+
+Example attack:
+
+- Fake GPS spoofing by multiple delivery partners  
+- No real disruption, but claims triggered artificially  
+- Coordinated claim submissions draining payout pool  
+
+This creates a "Market Crash" scenario where fraudulent actors exploit automated systems.
+
+---
+
+## Our Defense Philosophy
+
+GigShield AI follows a **multi-layered defense approach**:
+
+1. **Trust Scoring instead of binary validation**
+2. **Cross-verification using multiple data sources**
+3. **Behavioral anomaly detection**
+4. **Group fraud detection (fraud rings)**
+5. **Fairness-first approach to protect honest workers**
+
+---
+
+## 1. Multi-Signal Location Verification
+
+Instead of relying only on GPS, the system validates location using:
+
+- GPS coordinates
+- Network/IP location consistency
+- Historical movement patterns
+- Platform activity logs (mock delivery activity)
+
+### Logic:
+
+If GPS shows presence in a flooded zone  
+BUT no movement history OR inconsistent IP location  
+→ Flag as suspicious
+
+---
+
+## 2. Activity-Based Validation
+
+A genuine worker affected by disruption shows:
+
+- Reduced or zero delivery activity  
+- Gradual drop in movement before disruption  
+- Consistent location behavior  
+
+### Fraud Pattern:
+
+- Sudden inactivity without prior activity pattern  
+- Claims without active delivery history  
+
+### Rule:
+
+IF no delivery activity recorded in past time window  
+AND claim triggered  
+→ Increase fraud risk score
+
+---
+
+## 3. Environmental Correlation Engine
+
+Claims must match real-world conditions.
+
+System verifies:
+
+- Weather severity in exact micro-location  
+- Traffic congestion data  
+- Road closure reports  
+
+### Rule:
+
+IF user claims heavy rain disruption  
+BUT weather API shows normal conditions  
+→ Reject or flag claim
+
+---
+
+## 4. Fraud Ring Detection (MOST IMPORTANT)
+
+Fraud rarely happens individually — it happens in groups.
+
+The system detects:
+
+- Multiple claims from same location cluster  
+- Same time window claims from unrelated users  
+- Identical behavior patterns  
+
+### Example Pattern:
+
+- 50 users claim disruption in same zone  
+- But platform activity shows deliveries still happening  
+
+### Action:
+
+- Cluster flagged as "suspicious group"  
+- Claims moved to verification queue  
+
+---
+
+## 5. Behavioral Anomaly Detection
+
+Each worker has a baseline profile:
+
+- Average working hours  
+- Normal delivery zones  
+- Activity frequency  
+
+### Suspicious Behavior:
+
+- Sudden change in working location  
+- Unusual claim frequency  
+- Repeated claims during high-risk events  
+
+### Output:
+
+Each user gets a **Fraud Risk Score (0–1)**
+
+---
+
+## 6. Trust Score System
+
+Instead of blocking instantly, GigShield AI uses a trust score.
+
+| Score | Action |
+|------|--------|
+0.0 – 0.3 | Auto payout |
+0.3 – 0.7 | Delayed payout + verification |
+0.7 – 1.0 | Flag for manual review |
+
+---
+
+## 7. Fairness Mechanism (Critical)
+
+To avoid penalizing genuine workers:
+
+- First claim is always leniently evaluated  
+- Small payouts auto-approved even if risk is moderate  
+- Only repeated suspicious behavior triggers strict checks  
+
+---
+
+## 8. Rate Limiting & Payout Protection
+
+To prevent system drain:
+
+- Maximum payout cap per zone per time window  
+- Dynamic throttling during extreme claim spikes  
+
+---
+
+## 9. Continuous Learning Loop
+
+The system improves over time:
+
+- Fraud cases feed into ML models  
+- Patterns are updated dynamically  
+- Risk scoring becomes more accurate  
+
+---
+
+## Final Outcome
+
+GigShield AI ensures:
+
+- Fraudulent claims are detected early  
+- Coordinated fraud rings are neutralized  
+- Honest workers receive uninterrupted payouts  
+
+The system balances **security + fairness**, ensuring trust in the platform while maintaining financial sustainability.
+
+---
