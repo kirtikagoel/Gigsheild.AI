@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Worker Protection App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadDashboard()">
+
+<h1>Protect Your Income</h1>
+
+<div class="container">
+
+<h2>Signup</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+
+<input type="text" id="city" placeholder="Enter City">
+
+<select id="platform">
+<option>Zomato</option>
+<option>Swiggy</option>
+<option>Zepto</option>
+<option>Amazon</option>
+</select>
+
+<button onclick="registerUser()">Register</button>
+
+<p id="message"></p>
+<hr>
+
+<h2>Select Insurance Plan</h2>
+
+<select id="plan">
+<option value="29">Basic Plan - ₹29/week</option>
+<option value="49">Standard Plan - ₹49/week</option>
+<option value="79">Premium Plan - ₹79/week</option>
+</select>
+
+<select id="risk">
+<option value="low">Low Risk Area</option>
+<option value="medium">Medium Risk Area</option>
+<option value="high">High Risk Area</option>
+</select>
+
+<select id="hours">
+<option>4 Hours Coverage</option>
+<option>8 Hours Coverage</option>
+<option>12 Hours Coverage</option>
+</select>
+
+<br>
+
+<button onclick="savePlan()">Activate Policy</button>
+
+<p id="planMessage"></p>
+<hr>
+
+<h2>Claims Management</h2>
+
+<select id="trigger">
+<option value="none">Select Disruption</option>
+<option value="rain">Heavy Rain</option>
+<option value="flood">Flood</option>
+<option value="traffic">Heavy Traffic</option>
+<option value="strike">Worker Strike</option>
+<option value="appdown">App Server Down</option>
+</select>
+
+<br><br>
+
+<button onclick="checkTrigger()">Check Claim Eligibility</button>
+
+<p id="claimMessage"></p>
+<br><br>
+
+<button onclick="checkWeatherAPI()">
+Auto Check Weather (Mock API)
+</button>
+
+<p id="weatherMessage"></p>
+
+<br><br>
+
+<button onclick="checkTrafficAPI()">
+Auto Check Traffic (Mock API)
+</button>
+
+<p id="trafficMessage"></p>
+
+<br><br>
+
+<button onclick="checkFloodAPI()">
+Auto Check Flood Risk (Mock API)
+</button>
+
+<p id="floodMessage"></p>
+
+<hr>
+
+<h2>Worker Dashboard</h2>
+
+<button onclick="loadDashboard()">
+View Saved Details
+</button>
+
+<p id="dashboardMessage"></p>
+
+<br><br>
+
+<button onclick="resetSystem()">
+Reset All Data
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
